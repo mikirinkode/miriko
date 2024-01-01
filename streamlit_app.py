@@ -20,8 +20,14 @@ miriko = Miriko(st.session_state["openai_model"], client)
 st.title("Miriko - Prompt Master")
 
 # display initial message
-with st.chat_message("assistant"):
-    st.write("Hello, I'm Miriko. I will help you to optimize your prompt.")
+col1, col2 = st.columns([1, 6])
+# col1.subheader("Miriko")
+col1.image("assets/miriko.png", width=85)
+
+# col2.subheader("Tagline")
+with col2.container(border=True):
+    st.write("""Hi, I'm Miriko. How can i assist you with optimizing your prompts today?""")
+st.write("\n")
 
 # make user can select the model    
 # selected_model = st.selectbox(
