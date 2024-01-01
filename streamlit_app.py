@@ -75,12 +75,14 @@ with st.form('prompt_form'):
                 
                 # save the response to session state
                 st.session_state["is_finished"] = True
-                st.session_state["full_response"] = full_response
+                st.session_state["previous_response"] = full_response
     else :
         # if not submitted display the previous response
-        with st.chat_message("assistant"):
-            message_placeholder = st.empty()
-            message_placeholder.markdown(st.session_state["full_response"])
+        previous_response = "" if "previous_response" not in st.session_state else st.session_state["previous_response"]
+        if previous_response != "":
+            with st.chat_message("assistant"):
+                message_placeholder = st.empty()
+                message_placeholder.markdown(previous_response)
                 
 # check is finished state
 is_finished = False if "is_finished" not in st.session_state else st.session_state["is_finished"]
@@ -90,11 +92,11 @@ if is_finished:
     is_copied = st.button("Copy to clipboard", key="copy")
     if is_copied:
         # copy the response to clipboard
-        pyperclip.copy(st.session_state["full_response"])
+        pyperclip.copy(st.session_state["previous_response"])
         
         # display success message and update the finished state
         st.success("Copied to clipboard")
         st.session_state["is_finished"] = False
 
 st.divider()
-st.write("created by mikirinkode")
+st.markdown("Miriko - Prompt Master | Testing Version. created by <a href = https://github.com/mikirinkode>mikirinkode</a>", True)
