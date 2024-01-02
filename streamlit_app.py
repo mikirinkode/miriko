@@ -48,4 +48,4 @@ with tab3:
 
 
 st.divider()
-st.markdown("Miriko - Prompt Master | Testing Version. created by <a href = https://github.com/mikirinkode>mikirinkode</a>", unsafe_allow_html=True)
+st.markdown("Miriko - Prompt Master | Testing Version. This code is open source and available <a href = https://github.com/mikirinkode/miriko-prompt-master>[here on Github]</a>", unsafe_allow_html=True)
