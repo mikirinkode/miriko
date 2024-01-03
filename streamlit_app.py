@@ -19,6 +19,9 @@ if "language" not in st.session_state:
 # setup miriko
 miriko = Miriko(client, st.session_state["openai_model"], st.session_state["language"])
 
+# set page name
+st.set_page_config(page_title="Prompt Master", page_icon="assets/prompt_master_logo.png")
+
 # display title    
 st.title("Miriko - Prompt Master")
 
