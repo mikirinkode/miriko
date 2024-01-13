@@ -2,6 +2,9 @@
 
 You can try the app here: <a href="https://promptmaster.streamlit.app/">https://promptmaster.streamlit.app/</a>
 
+### Screenshot
+<img src="https://raw.githubusercontent.com/mikirinkode/miriko-prompt-master/main/assets/pm_screenshoot.png" alt="App Preview">
+
 ## How to Run the APP on your Local 
 ### 1 Git Clone
 First You need to clone it to your local computer. Open your terminal and you use this command. </br>
